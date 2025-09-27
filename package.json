@@ -4,7 +4,8 @@
   "description": "",
   "main": "build.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js",
+    "dev": "esbuild src/index.jsx --bundle --outfile=public/bundle.js --sourcemap --servedir=public --watch"
   },
   "repository": {
     "type": "git",

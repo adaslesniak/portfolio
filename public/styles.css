@@ -1,0 +1,106 @@
+/* public/styles.css */
+:root {
+  --bg: #0b0b0b;
+  --panel: #111214;
+  --text: #e5e7eb;
+  --muted: #9aa0a6;
+  --border: #2a2f36;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.app {
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.shell {
+  width: 100%;
+  max-width: 860px;
+}
+
+.header {
+  display: flex;
+  align-items: center;      /* centers text vertically with avatar */
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 36px;
+  padding: 24px 32px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+}
+
+.header-text {
+  flex: 1;
+  text-align: center;       /* center text horizontally inside block */
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 9999px;
+  border: 4px solid #1f2328;
+  box-shadow: 0 8px 16px rgba(0,0,0,.35);
+  object-fit: cover;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;        /* bumped from 18px */
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  min-height: 160px;         /* a bit taller than header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.card-summary {
+  color: var(--muted);
+  margin: 0;
+  font-size: 16px;
+}
+
+.main {
+  display: grid;
+  gap: 16px;
+}

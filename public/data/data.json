@@ -1,0 +1,33 @@
+{
+  "siteInfo": {
+    "name": "Adam Leśniak",
+    "tagline": "Work Diary",
+    "avatar": "./data/avatar.jpg"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Data Pipeline Refactor",
+      "summary": "Refactored legacy pipeline to add safety and CI/CD integration.",
+      "image": "./data/pipeline.png"
+    },
+    {
+      "id": 2,
+      "title": "VR Shader Work",
+      "summary": "Built visual effects for VR experience, learning shaders from scratch.",
+      "image": "./data/vr.png"
+    },
+    {
+      "id": 3,
+      "title": "AI-Assisted UI Test Framework",
+      "summary": "Led integration of ML outputs into test suite; unblocked CV team and shipped core logic.",
+      "image": "./data/ai_test.png"
+    },
+    {
+      "id": 4,
+      "title": "Custom Video Engine",
+      "summary": "Delivered high-performance video module for mobile by frame-slicing trick.",
+      "image": "./data/video.png"
+    }
+  ]
+}
