@@ -1,0 +1,9 @@
+{
+    "title":"Data Pipeline Refactor",
+    "summary": "Refactored legacy data pipeline so project could move forward again.",
+    "date": "01-05-2025",
+    "main_tags": ["ASP.NET", "Data Pipeline", "Data Preprocessing", "Tests", "WPF"], 
+    "aux_tags": ["C#", "Refactor", "Legacy Code", ".NET Core", "Docker", "Python"],
+    "thumbnail": "data_pipeline.png",
+    "details": "telemetry_project.md"
+}

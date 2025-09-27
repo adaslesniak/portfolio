@@ -5,8 +5,8 @@
     "avatar": "./content/avatar.jpg"
   },
   "projects": [
-    "./content/data_pipeline_refactor/project.json",
-    "./content/bms_overview/project.json",
+    "./content/telemetry_pipeline/telemetry_project.json",
+    "./content/bms_overview/bms_project.json",
     "./content/ui_testing_framework/project.json",
     "./content/nissan_vr/project.json",    
     "./content/pseudo_video_engine/project.json"

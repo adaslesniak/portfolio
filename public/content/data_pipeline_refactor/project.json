@@ -1,9 +1,0 @@
-{
-    "title":"Data Pipeline Refactor",
-    "summary": "Refactored legacy data pipeline so project could move forward again.",
-    "date": "01-05-2025",
-    "main_tags": ["ASP.NET", "Data Pipeline", "Data Preprocessing", "Tests", "WPF"], 
-    "aux_tags": ["C#", "Refactor", "Legacy Code", ".NET Core", "Docker", "Python"],
-    "thumbnail": "data_pipeline.png",
-    "details": "For a customer who was stuck I paid back technical debt so he could move forward. It was a fragile data pipeline—buggy and hard to maintain. To fix this I: Fixed underlying safety issues by creating a shared base stage that safely handled errors. Ensured consistency by unifying code that performed same functions but had multiple implementations. Added integration-level test coverage into CI/CD. Created tools  to simplify the dev environment."
-}

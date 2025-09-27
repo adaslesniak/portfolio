@@ -4,6 +4,6 @@
     "date": "01-02-2019",
     "main_tags": ["IoT", "WinForms", "TCP", "Serial Port", "Free RTOS", "Embeedded"],
     "aux_tags": ["C#", "Nanoframework", ".NET Framework", "Architecture", "Team Leadership"],
-    "thumbnail": "Navitas4.jpg",
-    "details": ""
+    "thumbnail": "navitas_park.jpg",
+    "details": "bms_details.md"
 }

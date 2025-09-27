@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectOverlay from "./ProjectOverlay";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(null);
   const [projects, setProjects] = useState([]);   // ← define it here
   const [error, setError] = useState(null);
+  const [openProject, setOpenProject] = useState(null);
 
   useEffect(() => {
     fetch("./content/index.json")
@@ -38,9 +40,10 @@ export default function App() {
         </header>
 
         <main className="main">
-          {projects.map((p) => <ProjectCard key={p} src={p} />)}
+          {projects.map((p) => <ProjectCard key={p} src={p} onOpen={setOpenProject} />)}
         </main>
       </div>
+      <ProjectOverlay project={openProject} onClose={() => setOpenProject(null)} />
     </div>
   );
 }

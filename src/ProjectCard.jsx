@@ -1,7 +1,7 @@
 import React from "react";
 import { useProject } from "./useProject";
 
-export default function ProjectCard({ src }) {
+export default function ProjectCard({ src, onOpen }) {
   const { data, loading, error } = useProject(src);
 
   if (loading) {
@@ -32,7 +32,12 @@ export default function ProjectCard({ src }) {
   };
 
   return (
-    <article className="card">
+    <article className="card"
+      onClick={() => data && onOpen?.(data)}
+      style={{cursor: "pointer"}}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onOpen?.(data)}>
       <img src={data.thumbnail} alt={data.title} />
       <div className="card-date">{monthYear(data.date)}</div>
 

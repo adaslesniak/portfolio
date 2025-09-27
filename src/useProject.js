@@ -21,6 +21,7 @@ export function useProject(src) {
           date: j.date ?? "",
           tags: j.main_tags ?? [],
           thumbnail: resolveAsset(src, j.thumbnail),
+          details: resolveAsset(src, j.details)
         };
         if (!cancel) { setData(normalized); setErr(null); }
       } catch (e) {
