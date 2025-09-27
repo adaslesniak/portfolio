@@ -1,0 +1,7 @@
+1. clear avatar
+2. make thumbnails displayed
+3. display dates
+4. display tech_tags
+5. clear content
+6. make cards nicer
+7. if details not empty make them... clickable or extendable

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { resolveAsset } from "./relativePaths";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(null);
@@ -7,7 +8,7 @@ export default function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("./data/data.json")
+    fetch("./content/index.json")
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -38,9 +39,7 @@ export default function App() {
         </header>
 
         <main className="main">
-          {(projects ?? []).map((p) => (
-            <ProjectCard key={p.id ?? p.title ?? Math.random()} {...p} />
-          ))}
+          {projects.map((p) => <ProjectCard key={p} src={p} />)}
         </main>
       </div>
     </div>

@@ -1,0 +1,8 @@
+{
+    "title":"Pseudo Video Engine",
+    "summary": "Delivered high-performance video module by frame-slicing trick.",
+    "date": "01-08-2017",
+    "tech": ["Graphics", "Video Processing", "C#", "Performace", "Streams", "Desktop Application"],
+    "thumbnail": "???",
+    "details": ""
+}
