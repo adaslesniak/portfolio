@@ -19,8 +19,8 @@ export function useProject(src) {
           title: j.title ?? "Untitled",
           summary: j.summary ?? "",
           date: j.date ?? "",
-          tags: j.tech_tags ?? [],
-          cover: resolveAsset(src, j.small_img),
+          tags: j.main_tags ?? [],
+          thumbnail: resolveAsset(src, j.thumbnail),
         };
         if (!cancel) { setData(normalized); setErr(null); }
       } catch (e) {

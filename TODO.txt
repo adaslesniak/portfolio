@@ -5,3 +5,4 @@
 5. clear content
 6. make cards nicer
 7. if details not empty make them... clickable or extendable
+8. change date to end date so it doesn't look so outdated

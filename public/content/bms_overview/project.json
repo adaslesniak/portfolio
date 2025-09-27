@@ -2,7 +2,8 @@
     "title":"Programmable controllers framework",
     "summary": "For 5 years I led the development of a new generation of controllers that now powers many prestigious buildings across Europe.",
     "date": "01-02-2019",
-    "tech": ["IoT", "WinForms", "C#", ".NET Framework", "Nanoframework", "TCP", "Serial Port", "Free RTOS", "Embeedded", "Architecture", "Cross Functional Team Leadership"],
-    "thumbnail": "???",
+    "main_tags": ["IoT", "WinForms", "TCP", "Serial Port", "Free RTOS", "Embeedded"],
+    "aux_tags": ["C#", "Nanoframework", ".NET Framework", "Architecture", "Team Leadership"],
+    "thumbnail": "Navitas4.jpg",
     "details": ""
 }

@@ -1,8 +1,9 @@
 {
     "title":"AI-Assisted UI Test Framework",
     "summary": "Led integration of ML outputs into test suite; unblocked CV team and shipped core logic.",
-    "date": "01-01-2021",
-    "tech": ["Machine Learning", "Python", "ASP.NET", "C#", "SingalR", "Selenium", "Azure"],
-    "thumbnail": "???",
+    "date": "01-01-2022",
+    "main_tags": ["Python", "ASP.NET", "C#", "SignalR", "Selenium", "Azure", "Tests"],
+    "aux_tags": ["Relational Data Base"],
+    "thumbnail": "ui_testing.png",
     "details": ""
 }

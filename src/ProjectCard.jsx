@@ -21,22 +21,29 @@ export default function ProjectCard({ src }) {
     );
   }
 
+  const monthYear = (s = "") => {
+    const p = s.split(/[-/]/);
+    let y, m;
+    if (p[2]?.length === 4) { y = p[2]; m = p[1]; } // DD-MM-YYYY
+    else return s;
+    const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const mi = parseInt(m, 10);
+    return names[mi - 1] ? `${names[mi - 1]} ${y}` : s;
+  };
+
   return (
     <article className="card">
-      {data.thumbnail && (
-        <img
-          src={data.thumbnail}
-          alt={data.title}
-          style={{ width:"100%", height:180, objectFit:"cover", borderRadius:12, marginBottom:12 }}
-        />
-      )}
-      <h2 className="card-title">{data.title}</h2>
-      <p className="card-summary">{data.summary}</p>
-      {data.tags?.length ? (
-        <div className="tags">
+      <img src={data.thumbnail} alt={data.title} />
+      <div className="card-date">{monthYear(data.date)}</div>
+
+      <div className="card-main">
+        <h2 className="card-title">{data.title}</h2>
+        <p className="card-summary">{data.summary}</p>
+        <div className="card-tags">
           {data.tags.map((t, i) => <span className="badge" key={i}>{t}</span>)}
         </div>
-      ) : null}
+      </div>
     </article>
   );
+
 }

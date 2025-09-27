@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { resolveAsset } from "./relativePaths";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(null);
