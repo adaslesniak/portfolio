@@ -1,5 +1,3 @@
-# Data Pipeline Refactor
-
 In **May 2025**, I undertook a major refactor of a legacy data pipeline that had slowed down development for months.  
 The goal was simple: **reduce technical debt so the project could move forward again**.
 

@@ -1,7 +1,5 @@
 - clear avatar
-- fix images in ProjectOverlay
 - write proper content for bms_project
-- fix other images (make smaller maybe?)
 - deploy
 
 ... make cards nicer

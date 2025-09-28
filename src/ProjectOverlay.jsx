@@ -34,7 +34,10 @@ export default function ProjectOverlay({ project, onClose }) {
   }, [project]);
 
   if (!project) return null;
-  console.log("projectOverlay: ", project.details);
+  
+  const allTags = Array.from(
+    new Set([...(project.tags ?? []), ...(project.aux_tags ?? [])])
+  );
 
   return (
     <div
@@ -59,19 +62,82 @@ export default function ProjectOverlay({ project, onClose }) {
         }}
         onClick={(e) => e.stopPropagation()}
     >
-    <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", marginBottom:12 }}>
-        <h2 style={{ margin:0 }}>{project.title}</h2>
-        <button onClick={onClose}
-          style={{ background:"#222", color:"#eee", border:"1px solid #333",
-                   borderRadius:8, padding:"6px 10px", cursor:"pointer" }}>
-          Close
-        </button>
-    </div>
+    {/* Header */}
+        <div style={{ marginBottom: 12 }}>
+          <h2 style={{ margin: 0 }}>{project.title}</h2>
+          {project.date && (
+            <div style={{ opacity: .7, fontSize: 14, marginTop: 4 }}>{project.date}</div>
+          )}
+        </div>
+
     {loading ? (
        <p>Loading…</p>
     ) : (
         <OverlayRenderer markdown={md} data={project} />
     )}
+
+        {/* Footer: tags + close */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 8,
+            alignItems: "center",
+            justifyContent: "space-between",
+            borderTop: "1px solid #2a2f36",
+            marginTop: 16,
+            paddingTop: 12
+          }}
+        >
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+            {allTags.map((t, i) => (
+              <span
+                key={i}
+                style={{
+                  fontSize: 12,
+                  padding: "4px 8px",
+                  border: "1px solid #2a2f36",
+                  borderRadius: 999,
+                  opacity: .9
+                }}
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+          <div style={{ display: "flex", gap: 8, marginLeft: "auto", marginTop: 8 }}>
+          <a
+            href="https://www.aulendil.net/cv"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              background: "#222",
+              color: "#eee",
+              border: "1px solid #333",
+              borderRadius: 8,
+              padding: "6px 10px",
+              fontSize: 14,
+              textDecoration: "none",
+              cursor: "pointer"
+            }}
+          >
+            View CV
+          </a>
+          <button
+            onClick={onClose}
+            style={{
+              background: "#222",
+              color: "#eee",
+              border: "1px solid #333",
+              borderRadius: 8,
+              padding: "6px 10px",
+              cursor: "pointer"
+            }}
+          >
+            Close
+          </button>
+        </div>
+        </div>
     </div>
    </div>
 );
