@@ -1,9 +1,9 @@
 {
     "title":"Programmable controllers framework",
-    "summary": "For 5 years I led the development of a new generation of controllers that now powers many prestigious buildings across Europe.",
-    "date": "01-02-2019",
-    "main_tags": ["IoT", "WinForms", "TCP", "Serial Port", "Free RTOS", "Embeedded"],
-    "aux_tags": ["C#", "Nanoframework", ".NET Framework", "Architecture", "Team Leadership"],
-    "thumbnail": "navitas_park.jpg",
+    "summary": "I led the architecture and development of a new generation of building controllers, now powering many prestigious buildings across Europe. The system had to run complex workloads for decades on minimal hardware, which demanded relentless optimization and careful design. Along the way I bridged business vision, customer support insights, and engineering skill into a coherent framework. More than anything, this project taught me the value of collaboration and the importance of aligning technology with real-world needs.",
+    "date": "01-04-2024",
+    "main_tags": ["IoT", "Architecture", "Team Leadership", "Embedded"],
+    "aux_tags": ["C#", "nanoFramework", ".NET Framework", "Architecture", "Team Leadership", "WinForms", "TCP", "Serial Port", "FreeRTOS", "BACnet", "Modbus", "Performance", "Python", "Unit Tests", "System Tests"],
+    "thumbnail": "bms_thumbnail.png",
     "details": "bms_details.md"
 }

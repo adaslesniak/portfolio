@@ -66,7 +66,7 @@ export default function ProjectOverlay({ project, onClose }) {
         <div style={{ marginBottom: 12 }}>
           <h2 style={{ margin: 0 }}>{project.title}</h2>
           {project.date && (
-            <div style={{ opacity: .7, fontSize: 14, marginTop: 4 }}>{project.date}</div>
+            <div style={{ opacity: .7, fontSize: 14, marginTop: 4 }}>{project.date.split("-")[2]}</div>
           )}
         </div>
 
