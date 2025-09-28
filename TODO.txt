@@ -1,8 +1,25 @@
-1. clear avatar
-2. make thumbnails displayed
-3. display dates
-4. display tech_tags
-5. clear content
-6. make cards nicer
-7. if details not empty make them... clickable or extendable
-8. change date to end date so it doesn't look so outdated
+- clear avatar
+- fix images in ProjectOverlay
+- write proper content for bms_project
+- fix other images (make smaller maybe?)
+- deploy
+
+... make cards nicer
+... video embeddings
+... filterings by tags
+... auto sort by date
+
+
+list of projects:
+- scrabble game
+- video by frames (with mentioning motion detection algorithm)
+- video processing for dive
+- first game
+- ai end project
+- ai tests project
+- telemetry pipeline
+- log from nano edge engine
+- dealing with 10k view file
+- cleaning up ictool
+- frontent experiments
+- asp.net experiment (that i did dirty, so i just played how it should be by the book)

@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import OverlayRenderer from "./OverlayRenderer";
 
 export default function ProjectOverlay({ project, onClose }) {
   const [md, setMd] = useState("");
@@ -31,6 +34,7 @@ export default function ProjectOverlay({ project, onClose }) {
   }, [project]);
 
   if (!project) return null;
+  console.log("projectOverlay: ", project.details);
 
   return (
     <div
@@ -63,9 +67,11 @@ export default function ProjectOverlay({ project, onClose }) {
           Close
         </button>
     </div>
-    <pre style={{ whiteSpace:"pre-wrap", margin:0 }}>
-       {loading ? "Loading…" : md}
-    </pre>
+    {loading ? (
+       <p>Loading…</p>
+    ) : (
+        <OverlayRenderer markdown={md} data={project} />
+    )}
     </div>
    </div>
 );

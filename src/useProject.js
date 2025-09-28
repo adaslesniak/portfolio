@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { resolveAsset } from "./relativePaths";
+import { assetUrl, basePath } from "./relativePaths";
+import { projectData } from "./projectData";
 
 export function useProject(src) {
   const [data, setData] = useState(null);
@@ -14,15 +15,8 @@ export function useProject(src) {
         const r = await fetch(src);
         if (!r.ok) throw new Error(`${src} HTTP ${r.status}`);
         const j = await r.json();
-        const normalized = {
-          slug: src.split("/").slice(-2, -1)[0],
-          title: j.title ?? "Untitled",
-          summary: j.summary ?? "",
-          date: j.date ?? "",
-          tags: j.main_tags ?? [],
-          thumbnail: resolveAsset(src, j.thumbnail),
-          details: resolveAsset(src, j.details)
-        };
+        const content_folder = basePath(src);
+        const normalized = projectData(src, j);
         if (!cancel) { setData(normalized); setErr(null); }
       } catch (e) {
         if (!cancel) setErr(String(e));
