@@ -1,20 +1,17 @@
-- content for ui testing framework
+- links to about_me, cv, hallucinations at the top
+- telemetry pipeline project content
+- auto sort by date
+- video embeddings? (if not that hard)
 
-
-... video embeddings
 ... filterings by tags
-... auto sort by date
-... make cards nicer
+... ask a question button instead of "View CV" under the overview (with auto topic "Regarding <project_name> ...")
 
-
-list of projects:
+list of projects to document:
 - scrabble game data preprocessing
 - video by frames (with mentioning motion detection algorithm)
 - video processing for dive
 - first game (hopa thingie)
 - ai school end project
-- ai tests project
-- telemetry pipeline
 - log from nano edge engine
 - dealing with 10k view file
 - cleaning up ictool
