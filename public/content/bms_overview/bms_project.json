@@ -1,9 +1,9 @@
 {
-    "title":"Programmable controllers framework",
-    "summary": "I led the architecture and development of a new generation of building controllers, now powering many prestigious buildings across Europe. The system had to run complex workloads for decades on minimal hardware, which demanded relentless optimization and careful design. Along the way I bridged business vision, customer support insights, and engineering skill into a coherent framework. More than anything, this project taught me the value of collaboration and the importance of aligning technology with real-world needs.",
+    "title":"Programmable Controllers Framework",
+    "summary": "I led the architecture and development of a new generation of building controllers, now powering many prestigious buildings across Europe. The system had to run complex workloads for decades on minimal hardware, which demanded hardcore optimization and careful design. Along the way I bridged business vision, customer support insights, and engineering skill into a coherent framework. More than anything, this project taught me the value of collaboration and the importance of aligning technology with real-world needs.",
     "date": "01-04-2024",
-    "main_tags": ["IoT", "Architecture", "Team Leadership", "Embedded"],
-    "aux_tags": ["C#", "nanoFramework", ".NET Framework", "Architecture", "Team Leadership", "WinForms", "TCP", "Serial Port", "FreeRTOS", "BACnet", "Modbus", "Performance", "Python", "Unit Tests", "System Tests"],
+    "main_tags": ["IoT", "Architecture", "Team Leadership", "Embedded", "Applied Research"],
+    "aux_tags": ["C#", "nanoFramework", ".NET Framework", "WinForms", "TCP", "Serial Port", "FreeRTOS", "BACnet", "Modbus", "Performance", "Python", "Unit Tests", "System Tests"],
     "thumbnail": "bms_thumbnail.png",
     "details": "bms_details.md"
 }

@@ -7,7 +7,7 @@
   "projects": [
     "./content/telemetry_pipeline/telemetry_project.json",
     "./content/bms_overview/bms_project.json",
-    "./content/ui_testing_framework/project.json",
+    "./content/ui_testing_framework/ui_testing_framework.json",
     "./content/nissan_vr/project.json",    
     "./content/pseudo_video_engine/project.json"
   ]

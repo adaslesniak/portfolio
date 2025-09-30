@@ -1,0 +1,9 @@
+{
+    "title":"UI Test Framework with Computer Vision",
+    "summary": "Guided integration of computer vision into automated UI testing, designed a universal JSON model spanning multiple engines, and kept an R&D team productive by bridging the AI group. The project showcased initiative, adaptability, leadership skills, and research experience, even if it ended before commercial rollout.",
+    "date": "01-01-2022",
+    "main_tags": ["Architecture", "Team Leadership", "ASP.NET", "SaaS", "Applied Research"],
+    "aux_tags": ["C#", "Relational Data Base", "Entity Framework", "SignalR", "Selenium", "UI Testing", "Azure Blob", "CI/CD", "Python", "Flask", "Git Flow", "Backend", "Azure", "Cloud"],
+    "thumbnail": "ui_testing_thumbnail.png",
+    "details": "ui_testing_framework.md"
+}

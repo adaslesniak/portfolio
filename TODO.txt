@@ -1,23 +1,22 @@
-- clear avatar
-- write proper content for bms_project
-- deploy
+- content for ui testing framework
 
-... make cards nicer
+
 ... video embeddings
 ... filterings by tags
 ... auto sort by date
+... make cards nicer
 
 
 list of projects:
-- scrabble game
+- scrabble game data preprocessing
 - video by frames (with mentioning motion detection algorithm)
 - video processing for dive
-- first game
-- ai end project
+- first game (hopa thingie)
+- ai school end project
 - ai tests project
 - telemetry pipeline
 - log from nano edge engine
 - dealing with 10k view file
 - cleaning up ictool
-- frontent experiments
+- frontent experiment (portfolio)
 - asp.net experiment (that i did dirty, so i just played how it should be by the book)
