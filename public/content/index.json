@@ -2,7 +2,8 @@
   "siteInfo": {
     "name": "Adam Leśniak",
     "tagline": "Work Diary",
-    "avatar": "./content/avatar.jpg"
+    "avatar": "./content/avatar.jpg",
+    "cv": "./content/adam_lesniak_cv.pdf"
   },
   "projects": [
     "./content/telemetry_pipeline/telemetry_project.json",

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Header({ siteInfo }) {
+export function Header({ siteInfo, onOpenView }) {
   return (
     <header
       className="header"
@@ -38,7 +38,7 @@ export function Header({ siteInfo }) {
         >
           <a className="nav-btn" href="https://aulendil.net/hallucinations/about-me/">About Me</a>
           <a className="nav-btn" href="https://aulendil.net/hallucinations/">AI Notes</a>
-          <a className="nav-btn nav-primary" href="https://www.aulendil.net/cv" target="_blank" rel="noopener noreferrer">CV</a>
+          <a className="nav-btn"  href={siteInfo?.cv} onClick={(e) => { e.preventDefault(); onOpenView?.(); }} >CV</a>
           <a className="nav-btn" href="https://www.linkedin.com/in/adas-lesniak/" target="_blank" rel="noopener noreferrer">Contact</a>
         </nav>
 
