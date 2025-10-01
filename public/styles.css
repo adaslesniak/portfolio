@@ -56,6 +56,21 @@ body {
   object-fit: cover;
 }
 
+.nav-btn {
+  color: #404069;
+  text-decoration: underline;
+  padding: 4px 12px;
+  font-size: 16px;
+}
+
+.nav-btn:hover { 
+  background: #202025;           
+  border-color: var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  transform: scale(1.1) translateY(1px);
+}
+
 .title {
   margin: 0 0 6px;
   font-size: 32px;
