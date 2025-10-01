@@ -1,5 +1,6 @@
 // AboutMeOverlay.jsx
 import React, { useEffect, useState } from "react";
+import { assetUrl } from "./relativePaths";
 
 export default function AboutMeOverlay({ open, siteInfo, onClose }) {
   const [info, setInfo] = useState(null);
@@ -81,8 +82,10 @@ export default function AboutMeOverlay({ open, siteInfo, onClose }) {
             {values.map((v, i) => {
               const imgName = v.illustration || v.image;
               const caption = v.img_text || v.imgText || "";
-              const base = (siteInfo?.about || "").replace(/[^/]+$/, ""); // folder of about.json
-              const imgSrc = imgName ? base + imgName : null;
+              /*const base = (siteInfo?.about || "").replace(/[^/]+$/, "");*/
+              const imgSrc = imgName ? assetUrl(siteInfo.about, imgName) : null;
+              const title = ((v.title || `Item ${i + 1}`).trim().replace(/\s*:?$/, "")) + ":";
+
               return (
                 <div
                   key={i}
@@ -93,39 +96,48 @@ export default function AboutMeOverlay({ open, siteInfo, onClose }) {
                     background: "rgba(255,255,255,0.02)",
                   }}
                 >
-                  <div style={{ fontWeight: 600 }}>{v.title || `Item ${i + 1}`}</div>
+                  {/* GRID: left = title+text, right = image+caption */}
                   <div
                     style={{
                       display: "grid",
-                      gridTemplateColumns: "minmax(0,1fr) 360px", // text | image
+                      gridTemplateColumns: "minmax(0,1fr) 320px",
                       gap: 16,
                       alignItems: "start",
                     }}
                   >
-                  <div style={{ lineHeight: 1.7 }}>
-                    {v.text || ""}
-                  </div>
+                    {/* LEFT COLUMN */}
+                    <div>
+                      <div style={{ fontWeight: 700, fontSize: 18, marginBottom: 8 }}>
+                        {title}
+                      </div>
+                      <div style={{ lineHeight: 1.7, marginTop: 4 }}>
+                        {v.text || ""}
+                      </div>
+                    </div>
 
-                  {imgSrc ? (
-                    <figure style={{ margin: 0, textAlign: "center" }}>
-                      <img
-                        src={imgSrc}
-                        alt={caption || v.title || `image ${i + 1}`}
-                        style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
-                      />
-                      {caption && (
-                        <figcaption style={{ fontSize: 12, opacity: 0.7, marginTop: 6 }}>
-                          {caption}
-                        </figcaption>
-                      )}
-                    </figure>
-                  ) : (
-                    <div /> /* keep column structure even if no image */
-                  )}
-                </div> 
+                    {/* RIGHT COLUMN */}
+                    <div style={{ alignSelf: "start" }}>
+                      {imgSrc ? (
+                        <figure style={{ margin: 0, textAlign: "center" }}>
+                          <img
+                            src={imgSrc}
+                            alt={caption || v.title || `image ${i + 1}`}
+                            style={{ width: "85%", height: "auto", borderRadius: 8, display: "block" }}
+                          />
+                          {caption && (
+                            <figcaption style={{ fontSize: 12, color: "#707088", marginTop: 6 }}>
+                              {caption}
+                            </figcaption>
+                          )}
+                        </figure>
+                      ) : null}
+                    </div>
+                  </div>
                 </div>
               );
-          })}
+            })}
+
+
           </div>
         )}
 
