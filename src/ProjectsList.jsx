@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Header } from "./Header";
 import ProjectCard from "./ProjectCard";
 
 export default function ProjectsList({ onOpen, onPathsReady }) {
@@ -23,22 +24,12 @@ export default function ProjectsList({ onOpen, onPathsReady }) {
 
   return (
     <>
-      <header className="header">
-        <div className="header-text">
-          <h1 className="title">{siteInfo.name ?? "—"}</h1>
-          <p className="tagline">{siteInfo.tagline ?? ""}</p>
-        </div>
-        {siteInfo.avatar ? <img src={siteInfo.avatar} alt="avatar" className="avatar" /> : null}
-      </header>
-
+      <Header siteInfo={siteInfo} />
       <main className="main">
         {projects.map((p) => (
           <ProjectCard key={p} src={p} onOpen={onOpen} />
         ))}
       </main>
-
-      {/* expose project paths to parent through a property if needed */}
-      {/* Alternatively, lift the index fetch up if you prefer. */}
     </>
   );
 }

@@ -106,23 +106,6 @@ export default function ProjectOverlay({ project, onClose }) {
             ))}
           </div>
           <div style={{ display: "flex", gap: 8, marginLeft: "auto", marginTop: 8 }}>
-          <a
-            href="https://www.aulendil.net/cv"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              background: "#222",
-              color: "#eee",
-              border: "1px solid #333",
-              borderRadius: 8,
-              padding: "6px 10px",
-              fontSize: 14,
-              textDecoration: "none",
-              cursor: "pointer"
-            }}
-          >
-            View CV
-          </a>
           <button
             onClick={onClose}
             style={{

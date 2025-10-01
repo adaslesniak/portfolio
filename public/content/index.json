@@ -9,6 +9,6 @@
     "./content/bms_overview/bms_project.json",
     "./content/ui_testing_framework/ui_testing_framework.json",
     "./content/nissan_vr/project.json",    
-    "./content/pseudo_video_engine/project.json"
+    "./content/video_hack/video_hack.json"
   ]
 }

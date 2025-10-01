@@ -1,0 +1,9 @@
+{
+    "title":"A hack for a video player",
+    "summary": "Built a custom motion detection algorithm and delivered a working video solution by hacking around Unity’s slow player.",
+    "date": "01-08-2017",
+    "main_tags": ["Algorithms", "Performance", "Computer Vision"],
+    "aux_tags": ["Video Processing", "C#", "Graphics", "Desktop Application", "Unity3D", "Game Engine", "Problem Solving"],
+    "thumbnail": "video_hack_thumb.png",
+    "details": "video_hack.md"
+}

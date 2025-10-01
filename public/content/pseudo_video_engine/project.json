@@ -1,9 +1,0 @@
-{
-    "title":"A hack for a video player",
-    "summary": "Delivered high-performance video module by frame-slicing trick.",
-    "date": "01-08-2017",
-    "main_tags": ["Video Processing", "C#", "Performance", "Streaming"],
-    "aux_tags": ["Graphics", "Desktop Application"],
-    "thumbnail": "???",
-    "details": "video_hack.md"
-}
