@@ -37,6 +37,9 @@ export default function AboutMeOverlay({ open, siteInfo, onClose }) {
   // 2) Single early return AFTER all hooks
   if (!open) return null;
 
+  const aboutTitle = info?.title ?? "";
+  const intro = info?.intro ?? "";
+  const values = Array.isArray(info?.values) ? info.values : [];
   return (
     <div
       onClick={onClose}
@@ -60,9 +63,72 @@ export default function AboutMeOverlay({ open, siteInfo, onClose }) {
           minWidth: 320,
           textAlign: "center",
           border: "1px solid #2a2f36",
+          width: "100%", maxWidth: 860,
+          maxHeight: "calc(100vh - 96px)",
+          overflowY: "auto"
         }}
       >
-        {error ? `Error: ${error}` : loading ? "Loading…" : (info?.title || "___")}
+        <h1 style={{ margin: "0 0 12px 0", fontSize: 28, fontWeight: 600 }}>
+          {error ? `Error: ${error}` : loading ? "Loading…" : (aboutTitle)}
+        </h1>
+        {!loading && !error && (
+          <p style={{ margin: "0 0 20px 0", opacity: 0.9, lineHeight: 1.7 }}>
+            {intro}
+          </p>
+        )}
+        {!loading && !error && values.length > 0 && (
+          <div style={{ display: "grid", gap: 12 }}>
+            {values.map((v, i) => {
+              const imgName = v.illustration || v.image;
+              const caption = v.img_text || v.imgText || "";
+              const base = (siteInfo?.about || "").replace(/[^/]+$/, ""); // folder of about.json
+              const imgSrc = imgName ? base + imgName : null;
+              return (
+                <div
+                  key={i}
+                  style={{
+                    padding: "12px 14px",
+                    border: "1px solid var(--border)",
+                    borderRadius: 10,
+                    background: "rgba(255,255,255,0.02)",
+                  }}
+                >
+                  <div style={{ fontWeight: 600 }}>{v.title || `Item ${i + 1}`}</div>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "minmax(0,1fr) 360px", // text | image
+                      gap: 16,
+                      alignItems: "start",
+                    }}
+                  >
+                  <div style={{ lineHeight: 1.7 }}>
+                    {v.text || ""}
+                  </div>
+
+                  {imgSrc ? (
+                    <figure style={{ margin: 0, textAlign: "center" }}>
+                      <img
+                        src={imgSrc}
+                        alt={caption || v.title || `image ${i + 1}`}
+                        style={{ width: "100%", height: "auto", borderRadius: 8, display: "block" }}
+                      />
+                      {caption && (
+                        <figcaption style={{ fontSize: 12, opacity: 0.7, marginTop: 6 }}>
+                          {caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ) : (
+                    <div /> /* keep column structure even if no image */
+                  )}
+                </div> 
+                </div>
+              );
+          })}
+          </div>
+        )}
+
         <div className="overlayButtons">
           <button className="overlayBtn" onClick={onClose} autoFocus>
             Close
