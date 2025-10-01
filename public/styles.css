@@ -189,3 +189,18 @@ body {
   border-radius: 6px;
   overflow-x: auto;
 }
+
+.overlayButtons { display:flex; gap:8px; justify-content:flex-end; padding:8px; border-bottom:1px solid #2a2f36; }
+.overlayBtn  { background:#1a1c21; 
+  color:#e5e7eb; 
+  border:1px solid #2c3138; 
+  border-radius:8px; 
+  padding:6px 10px; 
+  line-height:1; 
+  text-decoration:none; 
+  cursor:pointer; 
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 550;
+}
+.overlayBtn:hover { background:#1e2229; transform: scale(1.15) translateY(1px); }

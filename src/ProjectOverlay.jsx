@@ -105,21 +105,9 @@ export default function ProjectOverlay({ project, onClose }) {
               </span>
             ))}
           </div>
-          <div style={{ display: "flex", gap: 8, marginLeft: "auto", marginTop: 8 }}>
-          <button
-            onClick={onClose}
-            style={{
-              background: "#222",
-              color: "#eee",
-              border: "1px solid #333",
-              borderRadius: 8,
-              padding: "6px 10px",
-              cursor: "pointer"
-            }}
-          >
-            Close
-          </button>
         </div>
+        <div className="overlayButtons">
+          <button className="overlayBtn" onClick={onClose} autoFocus>Close</button>
         </div>
     </div>
    </div>
