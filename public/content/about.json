@@ -1,0 +1,30 @@
+{
+  "title": "Adam Leśniak",
+  "intro": "My philosophy is to give a little bit more than I get. To be net positive. It’s that simple. It applies to work, to relationship, to place where I live, to everything. I’m an old timer that believes in the difference between good and evil, between beauty and ugly, between truth and lie, little lost in modern world where everything is just ok. Tolkien, not Martin.",
+  "values": [
+    {
+        "title": "Happy father of two",
+        "image": "dzieci.jpg",
+        "img_text": "There is some love.",
+        "text": "There is Dobrawa – age 4 and Cyprian – age 6. Their smile is the reason to wake up, to do all the chores, to do everything. They are wonderful, wonderful beyond anything in life. I try my best to rise them as smart and independent beings. That’s the biggest goal in my life."
+    },
+    {
+        "title": "Philosopher",
+        "image": "nad_wisla.jpg",
+        "img_text": "Looking in the same direction.",
+        "text": "I like to wonder about the world, to understand everything… or almost everything. Ugly things are stuff I’d like to avoid in my day dreaming. I like to imagine future of humanity colonising Moon and Mars, I like to imagine world where tech is there to help the people and let them focus on human things, like love, caring of each other."
+    },
+    {
+        "title": "Software guy",
+        "image": "z_krasnalem.jpg",
+        "img_text": "I found a friend.",
+        "text": "It’s in my veins. Everything is an algorithm. Be it behaviour of people, be it the way how light interacts with the environment, be it patterns in which the trees grow, even an organisations of men are like an algorithm. And even philosophy is a software. Rene Descartes method “Divide problems to simple parts” is my best guide."
+    },
+    {
+        "title": "Solitaire man",
+        "image": "zeglujac.jpg",
+        "img_text": "Just, wind and the waves.",
+        "text": "I best like to be alone among the trees, over the lake or on the sea. With a book, or with nothing. The one book that I love most I remember by heart so I can wonder over it for days without looking at a single page. But definitely without any screen or other information stream. With so much information hitting me every moment I very much need silent time to digest and just rest."
+    }
+  ]
+}

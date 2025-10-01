@@ -3,7 +3,8 @@
     "name": "Adam Leśniak",
     "tagline": "Work Diary",
     "avatar": "./content/avatar.jpg",
-    "cv": "./content/adam_lesniak_cv.pdf"
+    "cv": "./content/adam_lesniak_cv.pdf",
+    "about": "./content/about.json"
   },
   "projects": [
     "./content/telemetry_pipeline/telemetry_project.json",

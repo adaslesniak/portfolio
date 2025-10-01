@@ -63,7 +63,7 @@ export default function CvOverlay({ open, siteInfo, onClose }) {
           />
         </div>
 
-        {/* Fallback link if the PDF cannot be embedded */}
+        {/* Fallback link*/}
         <div style={{ padding: 8, borderTop: "1px solid #2a2f36", textAlign: "center", fontSize: 12, opacity: .8 }}>
           Having trouble viewing the PDF? <a href={siteInfo.cv} target="_blank" rel="noopener noreferrer">Open in new tab</a>.
         </div>

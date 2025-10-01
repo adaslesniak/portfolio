@@ -4,6 +4,7 @@ import ProjectOverlay from "./ProjectOverlay";
 import CvOverlay from "./CvOverlay";
 import useOverlayRouting from "./useOverlayRouting";
 import useViewRouting from "./useViewRouting";
+import AboutOverlay from "./AboutOverlay";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(null);
@@ -42,7 +43,7 @@ export default function App() {
           <ProjectsList
             siteInfo={siteInfo}
             onOpenProject={openByData}
-            onOpenView={() => openView("cv")}    
+            onOpenView={openView}    
             onPathsReady={onPathsReady}
           />
         )}
@@ -53,6 +54,14 @@ export default function App() {
       {siteInfo && (
         <CvOverlay
           open={view === "cv"}
+          siteInfo={siteInfo}
+          onClose={closeView}                     
+        />
+      )}
+
+      {siteInfo && (
+        <AboutOverlay
+          open={view === "about"}
           siteInfo={siteInfo}
           onClose={closeView}                     
         />
