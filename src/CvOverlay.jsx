@@ -1,14 +1,20 @@
 import React, { useEffect } from "react";
 
 export default function CvOverlay({ open, siteInfo, onClose }) {
-  if (!open) return null;
 
   // lock page scroll while overlay is open
   useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = prev; };
-  }, []);
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  if (!open) return null;
 
   return (
     <div

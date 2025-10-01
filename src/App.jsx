@@ -3,30 +3,33 @@ import ProjectsList from "./ProjectsList";
 import ProjectOverlay from "./ProjectOverlay";
 import CvOverlay from "./CvOverlay";
 import useOverlayRouting from "./useOverlayRouting";
+import useViewRouting from "./useViewRouting";
 
 export default function App() {
   const [siteInfo, setSiteInfo] = useState(null);
   const [projectPaths, setProjectPaths] = useState([]);
   const { openProject, openByData, close } = useOverlayRouting(projectPaths);
-  const [cvOpen, setCvOpen] = useState(false);
+  const { view, open: openView, close: closeView } = useViewRouting("v"); // <<—
+
   const [error, setError] = useState(null);
 
+  // Fetch ONLY siteInfo here
   useEffect(() => {
-    let cancelled = false;
+    let cancel = false;
     (async () => {
       try {
         const r = await fetch("./content/index.json");
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         const json = await r.json();
-        if (cancelled) return;
-        setSiteInfo(json?.siteInfo ?? {});
-        setProjectPaths(Array.isArray(json?.projects) ? json.projects : []);
+        if (!cancel) setSiteInfo(json?.siteInfo ?? {});
       } catch (e) {
-        if (!cancelled) setError(String(e));
+        if (!cancel) setError(String(e));
       }
     })();
-    return () => { cancelled = true; };
+    return () => { cancel = true; };
   }, []);
+
+  const onPathsReady = (paths) => setProjectPaths(paths);
 
   return (
     <div className="app">
@@ -38,20 +41,22 @@ export default function App() {
         ) : (
           <ProjectsList
             siteInfo={siteInfo}
-            projects={projectPaths}
             onOpenProject={openByData}
-            onOpenView={() => setCvOpen(true)}   // opens CV overlay
+            onOpenView={() => openView("cv")}    
+            onPathsReady={onPathsReady}
           />
         )}
       </div>
 
       <ProjectOverlay project={openProject} onClose={close} />
 
-      <CvOverlay
-        open={cvOpen}
-        siteInfo={siteInfo} // ensure this path exists
-        onClose={() => setCvOpen(false)}
-      />
+      {siteInfo && (
+        <CvOverlay
+          open={view === "cv"}
+          siteInfo={siteInfo}
+          onClose={closeView}                     
+        />
+      )}
     </div>
   );
 }
