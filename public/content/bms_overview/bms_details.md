@@ -32,3 +32,5 @@ When I joined the team I was already a strong developer, but only there did I tr
 
 But that’s not all. Being part of a team also means looking at the people themselves and understanding them—something no book can teach. Some developers need constant challenge or they risk boredom and stagnation, others need encouragement, and some respond best to critique. But all need to feel pride in what they do. There is no training program that can impart this instinct. Learning it firsthand was my greatest takeaway from this chapter of my career.
 
+[[https://nee.tech/](https://nee.tech/)]
+

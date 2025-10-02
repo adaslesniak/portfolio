@@ -82,8 +82,8 @@ export default function AboutMeOverlay({ open, siteInfo, onClose }) {
             {values.map((v, i) => {
               const imgName = v.illustration || v.image;
               const caption = v.img_text || v.imgText || "";
-              /*const base = (siteInfo?.about || "").replace(/[^/]+$/, "");*/
-              const imgSrc = imgName ? assetUrl(siteInfo.about, imgName) : null;
+              const base = (siteInfo?.about || "").replace(/[^/]+$/, "");
+              const imgSrc = imgName ? assetUrl(base, imgName) : null;
               const title = ((v.title || `Item ${i + 1}`).trim().replace(/\s*:?$/, "")) + ":";
 
               return (

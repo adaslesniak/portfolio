@@ -1,9 +1,0 @@
-{
-    "title":"Early VR project for Nissan",
-    "summary": "How to learn programming GPU's on the fly.",
-    "date": "01-09-2015",
-    "main_tags": ["Shaders", "Graphics", "Video Processing", "C#", "VR"],
-    "aux_tags": ["Game Engine", "Streams", "Unity 3D"],
-    "thumbnail": "nissan_juke.png",
-    "details": "In 2014 I was hired to implement experience logic... but that was trivial, while the project was all about delivering 'wow' effect and badly needed some shading and post processing magic. The point is that, when we started, I didn't even knew what a shader is. Six months later, by the time it was released, I implemented most of shading effects you can see in attached video. So don't worry if I don't know every detail of your tech stack."
-}

@@ -1,0 +1,9 @@
+{
+    "title":"Learning on the fly.",
+    "summary": "Mid-project I learned GPU programming and built the Cg visuals for Nissan’s VR demo at the Paris Motor Show: world assemble/dissolve, car repaint sweeps, mirror reflections, speed-cue post-FX.... I jumped into the hard stack and got the job done.",
+    "date": "01-10-2014",
+    "main_tags": ["Shaders", "Video Processing", "VR", "Post-Processing"],
+    "aux_tags": ["Unity 3D", "C#", "Cg/HLSL", "Real-time Graphics", "Performance", "Game Engine"],
+    "thumbnail": "nissan_vr.png",
+    "details": "nissan_vr.md"
+}

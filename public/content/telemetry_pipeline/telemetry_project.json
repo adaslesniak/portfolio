@@ -1,9 +1,9 @@
 {
-    "title":"Data Pipeline Refactor",
-    "summary": "Refactored legacy data pipeline so project could move forward again.",
+    "title":"Telemetry Pipeline Rescue",
+    "summary": "Rescued a broken telemetry pipeline by untangling code, adding safe concurrency, and rebuilding the data flow into a stable system. Delivered developer tools and tests that sped up work a few times.",
     "date": "01-05-2025",
-    "main_tags": ["ASP.NET", "Data Pipeline", "Data Preprocessing", "Tests", "WPF"], 
-    "aux_tags": ["C#", "Refactor", "Legacy Code", ".NET Core", "Docker", "Python"],
-    "thumbnail": "data_pipeline.png",
+    "main_tags": ["Data Pipeline", "Telemetry", "Development Tools", "Concurrency"], 
+    "aux_tags": ["C#", "WPF", "Architecture", "Performance", ".NET Core", "Python", "Codebase Modernization", "Technical Debt"],
+    "thumbnail": "telemetry_thumb.png",
     "details": "telemetry_project.md"
 }

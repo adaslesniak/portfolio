@@ -1,19 +1,20 @@
+- fix the ugly focus on close button when /?v=...
 - telemetry pipeline project content
 - auto sort by date
+- consolidate duplicated code and extract renderers from "about"
 
-... inline cv as an overlay /?v=cv
-... inline about me as an overlay /?v=about
+... wrap the text around the image in about me
+... make cv view dark mode
 ... filterings by tags
-... ask a question button instead of "View CV" under the overview (with auto topic "Regarding <project_name> ...")
+... clean the damn code
 
 list of projects to document:
 - scrabble game data preprocessing
-- video by frames (with mentioning motion detection algorithm)
 - video processing for dive
 - first game (hopa thingie)
 - ai school end project
+- frontent experiment (portfolio) and vibe coding -> ai ain't that great
 - log from nano edge engine
 - dealing with 10k view file
 - cleaning up ictool
-- frontent experiment (portfolio)
 - asp.net experiment (that i did dirty, so i just played how it should be by the book)
