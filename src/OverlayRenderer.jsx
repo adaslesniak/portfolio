@@ -1,5 +1,8 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+//import "katex/dist/katex.min.css";
 import remarkGfm from "remark-gfm";
 import { assetUrl } from "./relativePaths";
 
@@ -77,7 +80,8 @@ export default function OverlayRenderer({ markdown, data }) {
   return (
     <div className="markdown-body">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex]}
         components={{
           img({ node, ...props }) {
             return (

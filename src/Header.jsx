@@ -37,8 +37,9 @@ export function Header({ siteInfo, onOpenView }) {
           }}
         >
           <a className="nav-btn" href={siteInfo?.about} onClick={(e) => {e.preventDefault(); onOpenView?.("about")}} >About Me</a>
-          <a className="nav-btn" href="https://aulendil.net/hallucinations/">AI Notes</a>
+          <a className="nav-btn" href="https://aulendil.net/hallucinations/">ML Experiments</a>
           <a className="nav-btn"  href={siteInfo?.cv} onClick={(e) => { e.preventDefault(); onOpenView?.("cv"); }} >CV</a>
+          <a className="nav-btn" href="https://github.com/adaslesniak" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a className="nav-btn" href="https://www.linkedin.com/in/adas-lesniak/" target="_blank" rel="noopener noreferrer">Contact</a>
         </nav>
 

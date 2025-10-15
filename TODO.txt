@@ -1,5 +1,5 @@
 - fix the ugly focus on close button when /?v=...
-- telemetry pipeline project content
+
 - auto sort by date
 - consolidate duplicated code and extract renderers from "about"
 
@@ -9,9 +9,7 @@
 ... clean the damn code
 
 list of projects to document:
-- scrabble game data preprocessing
 - video processing for dive
-- first game (hopa thingie)
 - ai school end project
 - frontent experiment (portfolio) and vibe coding -> ai ain't that great
 - log from nano edge engine

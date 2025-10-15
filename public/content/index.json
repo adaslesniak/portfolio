@@ -10,6 +10,7 @@
     "./content/telemetry_pipeline/telemetry_project.json",
     "./content/bms_overview/bms_project.json",
     "./content/ui_testing_framework/ui_testing_framework.json",
+    "./content/scrabble/scrabble.json",
     "./content/video_hack/video_hack.json",
     "./content/nissan_vr/nissan_vr.json"
   ]

@@ -1,0 +1,9 @@
+{
+    "title":"Adjusting the data",
+    "summary": "Cut computation from days to seconds by reshaping data — trading 20× storage for roughly 10⁴× speed-up through custom preprocessing. Sometimes you need to redefine the probleme and look at the data when fixing an algorithm.",
+    "date": "01-12-2017",
+    "main_tags": ["Algorithms", "Data Structures", "Data Preprocessing"],
+    "aux_tags": ["C#", "Performance", "Parallel Computing", "Jump Pointers", "Indexing", "Problem Solving"],
+    "thumbnail": "data.png",
+    "details": "scrabble.md"
+}
